@@ -1,0 +1,137 @@
+:root{
+	--negro: #000000;
+	--verde1: #b1de00;
+	--verde2: #6CC115;
+	--verde3: #468902;
+	--azul1: #628290;
+	--azul2: #133954;
+}
+
+.navegador {
+	display: flex;
+	background-color: var(--negro);
+	flex-direction: row;
+	flex-wrap: nowrap;
+	height: 40px;
+	align-items: center;
+	justify-content: space-between;
+ 	
+}
+
+	/*ES EL CAMPO QUE RELLENAMOS*/
+.form {
+	position: relative;
+	overflow: hidden;
+	width: 270px;
+	height: 40px;
+	align-self: center;
+	text-transform: uppercase;
+	margin-bottom: 15px;
+}
+
+	/*ES EL INTERIOR DEL CAMPO FORM AFECTA A LA LETRA K ESCRIBIMOS*/
+.input{
+	width: 95%;
+	height: 100%;
+	padding-bottom: 2px;
+	background: transparent;
+	border: none;
+	outline: 0px;
+	text-transform: uppercase;
+	padding-left: 5px;
+	padding-top: 5px;
+	color: var(--verde1);
+
+}
+
+	/*COJE LA INFO PARA EL FORM DONDE PONEMOS UN BORDER*/
+.label{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	border-bottom: 2px solid var(--verde3);
+}
+
+
+.label:after{
+	content: "";
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-bottom: 2px solid var(--verde1);
+	transform: translateX(-100%);
+	transition: all 1s ease;
+}
+
+/*Es el texto del buscador*/
+.span{
+	position: absolute;
+	bottom: 5px;
+	left: 5px;
+	transition: all 0.7s ease;
+	color: var(--verde1);
+	opacity: 0.8;
+	font-size: 14px;
+	text-align: center;
+}
+
+
+.form input:focus + .label .span,.form input:valid + .label .span {
+	opacity: 0;
+	bottom: 5px;
+	color: var(--verde2);
+}
+
+
+.form input:focus + .label:after, .form input:valid + .label:after  {
+	transform: translateY(0%);
+}
+
+.navegador_superior{
+	display: flex;
+	align-self: center;
+	text-transform: uppercase;
+	margin:  0 auto;
+}
+
+.menu_navegador_superior{
+	display: flex;
+	list-style: none;
+ 	align-items: center;
+	align-self: center;	
+	justify-content: space-around;
+	padding: 0 10px;
+    min-height: 40px;
+}
+
+.menu_navegador_superior li{
+	margin: 0 10px;
+	color: var(--verde2);
+	font-size: 16px;
+}
+
+.menu_navegador_superior li:hover{
+	border-bottom: 2px solid var(--verde1) ;
+	color: var(--verde1);
+	transition: all 0.2s ease;
+}
+
+.nav-menu {
+	display: flex;	
+}
+
+.nav-ul {
+	position: relative;
+	display: flex;
+	height: 80px;
+	min-width: 400px;
+	margin: 0 30px;
+	justify-content: space-around;
+	align-items: center;
+	list-style: none;
+	align-self: flex-end;
+}
