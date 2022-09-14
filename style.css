@@ -8,6 +8,7 @@
 body {
 	background-color: black;
 	color: white;
+	font-size: 20px;
 }
 
 .navegador {
@@ -136,4 +137,12 @@ body {
 	align-items: center;
 	list-style: none;
 	align-self: flex-end;
+}
+
+.h1 {
+	color: blue
+}
+
+h2{
+	color: var(--azul)
 }
