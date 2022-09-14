@@ -1,15 +1,18 @@
 :root{
 	--negro: #000000;
-	--verde1: #b1de00;
-	--verde2: #6CC115;
-	--verde3: #468902;
-	--azul1: #628290;
-	--azul2: #133954;
+	--rojo: #FF2E2E;
+	--amarillo: #FCFC3B;
+	--azul: #628290;
+}
+
+body {
+	background-color: black;
+	color: white;
 }
 
 .navegador {
 	display: flex;
-	background-color: var(--negro);
+	background-color: var(--rojo);
 	flex-direction: row;
 	flex-wrap: nowrap;
 	height: 40px;
@@ -40,7 +43,7 @@
 	text-transform: uppercase;
 	padding-left: 5px;
 	padding-top: 5px;
-	color: var(--verde1);
+	color: white;
 
 }
 
@@ -52,7 +55,7 @@
 	width: 100%;
 	height: 100%;
 	pointer-events: none;
-	border-bottom: 2px solid var(--verde3);
+	border-bottom: 2px solid white;
 }
 
 
@@ -62,7 +65,7 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
-	border-bottom: 2px solid var(--verde1);
+	border-bottom: 2px solid var(--amarillo);
 	transform: translateX(-100%);
 	transition: all 1s ease;
 }
@@ -73,7 +76,6 @@
 	bottom: 5px;
 	left: 5px;
 	transition: all 0.7s ease;
-	color: var(--verde1);
 	opacity: 0.8;
 	font-size: 14px;
 	text-align: center;
@@ -83,7 +85,7 @@
 .form input:focus + .label .span,.form input:valid + .label .span {
 	opacity: 0;
 	bottom: 5px;
-	color: var(--verde2);
+	color: var(--amarillo);
 }
 
 
@@ -110,13 +112,13 @@
 
 .menu_navegador_superior li{
 	margin: 0 10px;
-	color: var(--verde2);
+	color: white;
 	font-size: 16px;
 }
 
 .menu_navegador_superior li:hover{
-	border-bottom: 2px solid var(--verde1) ;
-	color: var(--verde1);
+	border-bottom: 2px solid var(--amarillo) ;
+	color: var(--amarillo);
 	transition: all 0.2s ease;
 }
 
